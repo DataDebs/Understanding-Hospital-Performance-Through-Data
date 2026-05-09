@@ -1,6 +1,9 @@
 ## Understanding-Hospital-Performance-Through-Data
 
-### Hospital Operation Intelligence
+### Table of Content
+- [Project Overview] (#Project_Overview)
+- [Recommendations] (#recommendations)
+- [Data Sources] (#data-sources)
 
 ### Project Overview: This data analysis project aims to build foundational thinking skills required of healthcare data analysts. 
 
@@ -11,7 +14,71 @@
 - Financial & Outcome Data: (cost_of_encounter, discharge_disposition, outcome, readmission_flag)
 
 ### Tools:
--Excel-Data cleaning [Download here] (
+- Excel-Data cleaning [Download here] (https://drive.google.com/file/d/1IjWGxOlBPkCQPdfMXhPcur6FeZsLswU4/view?usp=drive_link)
 
 ### Data Cleaning/Preparation: In the data preparation phase, we performed the following tasks
+1. Data loading and inspection
+2. Handling missing values with mean
+3. Data cleaning and formatting
+
+### Exploratory Data Analysis
+EDA involved exploring data sales to answer questions such as 
+- How efficiently patients move through care?
+- Where delays may exist
+- What outcomes patients experience?
+- Which operational signals leadership should monitor?
+- How efficiently patients move through care
+- Identify 10 meaningful performance metrics that best explain how this hospital operates.(What the metric measures, why the metric matters in a hospital setting, how it relates to the patient care continuum, where does this metric sit?)
+- What is this hospital doing well operationally?
+-Where do you suspect bottlenecks or risks exist?
+-Which results would concern leadership?
+-What clarifying questions would you ask clinicians or administrators before recommending action?
+
+
+### Data Analysis
+Some interesting codes/features worked with include
+- Power Query to format the datetime to 
+- Functions like Maxifs where used to find the most previous date.time discharge date.time for same patient where earlier admission and discharge date.time is before current admission. Ifs functions were used where readmission is within 30 days then 1, else 0
+  
+### Results/Findings
+The analysis result is as follows;
+#### What is this hospital doing well operationally?
+- Efficient Discharge Process: 74.7% of patients fully recovered and returned home
+- Prompt Provider Response in ED: Adequate staffing and functional triage improved patient safety
+- Well-Managed Elective Care: Low severity and re-admission rates indicate strong planning
+- Effective Emergency Workflow: Even with high emergency volume, outcomes remain reasonable.
+- 
+#### Where do you suspect bottlenecks or risks exist?
+- Re-admissions within 30 days: May indicate gaps in discharge education, follow-up, or medications adherence.
+- High-Severity Emergency Load: Sudden spikes could strain staff, equipment and bed capacity
+- ED Wait Time: Extended waits may reflect staffing shortages, limited imaging and lab resources or inefficient triage
+- Cost Variability Across Encounters: Suggests potential overuse of diagnosis or resource inefficiencies.
+
+#### Which results would concern leadership?
+- High Re-admission Rates: Might signals possible quality gaps in treatment or discharge planning
+- Severe Emergency Cases with Poor Outcomes: Indicates patient safety risk and possible capacity limits
+- Long ED Wait Times: Impacts patient satisfaction and safety
+- High Cost, High-Frequency Procedures: Drives workload and spending. E.g Procedure 81002
+- Procedure and Diagnosis Cost Drives (Procedures 81002): Highest encounter count and cost. Key workload and financial driver while diagnosis N39 (Most common) had high demand for routine management and chronic care planning and A08 being less frequent but highest average cost. Cost-intensive, not volume-driven
+
+#### What clarifying questions would you ask clinicians or administrators before recommending action?
+- Are repeat visits by the same patient counted as separate encounters?
+- Are clinicians experiencing workload pressure affecting discharge timing?
+- Are delays caused by shared resources (labs, imaging)?
+- How is discharge planning conducted and what follow-up exists to reduce re-admissions?
+- Are staffing or equipment shortages contributing to ED delays or high-severity care strain?
+
+### Recommendations
+- Implement post-discharge follow-up for high-risk patients to reduce re-admissions
+- Review cost standardization protocols especially for high-cost procedures like 81002
+- Consider predictive staffing models for peak ED periods
+
+### Limitations
+I had find the mean of ages for patient whose age weren't consistent and gender column which wasnt consistent I replaced with a particular patient Id I looked for the sex that appeared most and used it to standardize 
+
+### References
+1. Luke Barousse Youtube Tutorials
+
+
+
 
