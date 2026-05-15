@@ -116,10 +116,12 @@ The analysis result is as follows;
 - Consider predictive staffing models for peak ED periods
 
 ## Limitations
-I had find the mean of ages for patient whose age weren't consistent and gender column which wasnt consistent I replaced with a particular patient Id I looked for the sex that appeared most and used it to standardize 
+- Missing values in important columns
+- Data Quality Issues
+- assumptions made during cleaning
 
-### References
-1. Luke Barousse Youtube Tutorials
+## References
+- Luke Barousse Youtube Tutorials
 
 
 
