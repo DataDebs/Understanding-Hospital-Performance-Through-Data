@@ -7,14 +7,31 @@
 
 ### Project Overview: This data analysis project aims to build foundational thinking skills required of healthcare data analysts. 
 
-### Data Sources: The primary dataset used for this analysis is "healthcare_performance_csv" file containing a detailed information about
+## Objectives
+- Identify 10 meaningful performance metrics that best explain how this hospital operates
+- What the metric measures? In plain, non-technical language,
+- Why the metric matters in a hospital setting? Link it to patient care, efficiency, or quality
+- How it relates to the patient care continuum?
+- Where does this metric sit? (ED, admission, treatment, discharge, outcome)
+
+
+### Data Information
+Dataset Name: Healthcare Performance Dataset
+
+Source: (https://drive.google.com/file/d/1IjWGxOlBPkCQPdfMXhPcur6FeZsLswU4/view?usp=drive_link)
+
+The Dataset contains:
 - Patient & Encounter Information: (patient_id, encounter_id, age, gender)
 - Visit & Operational Flow: (department, admission_type, admission_datetime, discharge_datetime, ed_arrival_time, provider_seen_time)
 - Clinical & Coding Data: (icd10_diagnosis, cpt_procedure, severity_level)
 - Financial & Outcome Data: (cost_of_encounter, discharge_disposition, outcome, readmission_flag)
 
-### Tools:
-- Excel-Data cleaning [Download here] (https://drive.google.com/file/d/1IjWGxOlBPkCQPdfMXhPcur6FeZsLswU4/view?usp=drive_link)
+Rows:5000
+Columns: 17
+
+##Tools and Technologies Used
+-Excel
+-PowerBi
 
 ### Data Cleaning/Preparation: In the data preparation phase, we performed the following tasks
 1. Data loading and inspection
@@ -28,7 +45,6 @@ EDA involved exploring data sales to answer questions such as
 - What outcomes patients experience?
 - Which operational signals leadership should monitor?
 - How efficiently patients move through care
-- Identify 10 meaningful performance metrics that best explain how this hospital operates.(What the metric measures, why the metric matters in a hospital setting, how it relates to the patient care continuum, where does this metric sit?)
 - What is this hospital doing well operationally?
 -Where do you suspect bottlenecks or risks exist?
 -Which results would concern leadership?
