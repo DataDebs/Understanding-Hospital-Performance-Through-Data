@@ -89,7 +89,7 @@ The analysis result is as follows;
 - Prompt Provider Response in ED: Adequate staffing and functional triage improved patient safety
 - Well-Managed Elective Care: Low severity and re-admission rates indicate strong planning
 - Effective Emergency Workflow: Even with high emergency volume, outcomes remain reasonable.
-- 
+
 #### Where do you suspect bottlenecks or risks exist?
 - Re-admissions within 30 days: May indicate gaps in discharge education, follow-up, or medications adherence.
 - High-Severity Emergency Load: Sudden spikes could strain staff, equipment and bed capacity
