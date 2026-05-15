@@ -43,34 +43,34 @@ Columns: 17
 - **Admission vs Discharge Validation**: Identified cases where admission occurred before discharge. Used `MAXIFS` to find the latest valid discharge date before the current admission.  
 - **Interval Calculation**: Applied an `IF` function — if discharge date is blank, return blank; otherwise, calculate the difference between discharge and admission dates.  
 
-## Department and Outcome Corrections
+### Department and Outcome Corrections
 - **Pediatrics Misclassification**: Flagged patients above 18 years incorrectly classified under Pediatrics. Corrected classification using conditional logic.  
 - **Emergency Department Fix**: Reassigned department values misclassified as elective/urgent to “Emergency.”  
 - **Discharge Disposition**: Corrected unrealistic discharge dispositions (e.g., “Skilled nursing” for expired patients). If outcome = “Expired,” then discharge disposition = “Expired.”  
 - **Readmission Flag**: If readmission flag = 1, labeled as “Readmitted,” else retained existing outcome.  
 - **Readmission Rate**: If interval between admissions ≥ 30 days, flagged as 1 (readmission), else 0.  
 
-## Medical Codes
+### Medical Codes
 - **ICD-10 & CPT Codes**: Used `XLOOKUP` to map codes to descriptions, making data interpretable for non-medical professionals.  
 
-## Patient Demographics
+### Patient Demographics
 - **Gender Consistency**: For patients with conflicting gender entries, selected the most frequent value. If no majority, chose the first recorded gender using `INDEX` and `MATCH`.  
 - **Age Consistency**: For patients with multiple ages, calculated the mean age per patient for consistency.  
 
-## Handling Missing Values
+### Handling Missing Values
 - **Cost of Encounter**: Imputed missing values with the median cost  
 
-## Converting Data Types
+### Converting Data Types
 - **Date Columns**: Standardized all date columns to US format using Power Query.  
 
-## Standardizing Column Names
+### Standardizing Column Names
 - Ensured all column names followed a consistent naming convention for readability and easier querying
 - Standardization of the Cost of Encounter column with the dollar symbol.  
 
-## Duplicate Check
+### Duplicate Check
 - Duplicates: No duplicate records were found.  
 
-### Exploratory Data Analysis
+## Exploratory Data Analysis
 Several analyses and visualizations were performed to understand the dataset. The following questions were explored. 
 - How efficiently patients move through care?
 - Where delays may exist
@@ -82,7 +82,7 @@ Several analyses and visualizations were performed to understand the dataset. Th
 - Which results would concern leadership?
 - What clarifying questions would you ask clinicians or administrators before recommending action?
 
-### Results/Findings
+## Results/Findings
 The analysis result is as follows;
 #### What is this hospital doing well operationally?
 - Efficient Discharge Process: 74.7% of patients fully recovered and returned home
@@ -110,12 +110,12 @@ The analysis result is as follows;
 - How is discharge planning conducted and what follow-up exists to reduce re-admissions?
 - Are staffing or equipment shortages contributing to ED delays or high-severity care strain?
 
-### Recommendations
+## Recommendations
 - Implement post-discharge follow-up for high-risk patients to reduce re-admissions
 - Review cost standardization protocols especially for high-cost procedures like 81002
 - Consider predictive staffing models for peak ED periods
 
-### Limitations
+## Limitations
 I had find the mean of ages for patient whose age weren't consistent and gender column which wasnt consistent I replaced with a particular patient Id I looked for the sex that appeared most and used it to standardize 
 
 ### References
