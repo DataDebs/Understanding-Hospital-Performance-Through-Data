@@ -17,9 +17,9 @@ This data analysis project aims to build foundational thinking skills required o
 
 
 ### Data Information
-Dataset Name: Healthcare Performance Dataset
+-**Dataset Name**: Healthcare Performance Dataset
 
-Source: (https://drive.google.com/file/d/1IjWGxOlBPkCQPdfMXhPcur6FeZsLswU4/view?usp=drive_link)
+-**Source**: (https://drive.google.com/file/d/1IjWGxOlBPkCQPdfMXhPcur6FeZsLswU4/view?usp=drive_link)
 
 The Dataset contains:
 - Patient & Encounter Information: (patient_id, encounter_id, age, gender)
@@ -35,7 +35,7 @@ Columns: 17
 - Excel
 - PowerBi
 
-## Data Cleaning/Preparation: The following datIa cleaning processes were carried out: 
+## Data Cleaning/Preparation: The following data cleaning processes were carried out: 
 
 ###  Data Loading and Inspection
 
