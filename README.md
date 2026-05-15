@@ -27,16 +27,46 @@ The Dataset contains:
 - Financial & Outcome Data: (cost_of_encounter, discharge_disposition, outcome, readmission_flag)
 
 Rows:5000
+
 Columns: 17
 
-##Tools and Technologies Used
--Excel
--PowerBi
+## Tools and Technologies Used
+- Excel
+- PowerBi
 
-### Data Cleaning/Preparation: In the data preparation phase, we performed the following tasks
-1. Data loading and inspection
-2. Handling missing values with mean
-3. Data cleaning and formatting
+## Data Cleaning/Preparation: The following datIa cleaning processes were carried out: 
+
+###  Data Loading and Inspection
+- **Date/Time Standardization**: Converted all date/time columns to US timestamp format using Power Query.  
+- **Admission vs Discharge Validation**: Identified cases where admission occurred before discharge. Used `MAXIFS` to find the latest valid discharge date before the current admission.  
+- **Interval Calculation**: Applied an `IF` function — if discharge date is blank, return blank; otherwise, calculate the difference between discharge and admission dates.  
+
+## Department and Outcome Corrections
+- **Pediatrics Misclassification**: Flagged patients above 18 years incorrectly classified under Pediatrics. Corrected classification using conditional logic.  
+- **Emergency Department Fix**: Reassigned department values misclassified as elective/urgent to “Emergency.”  
+- **Discharge Disposition**: Corrected unrealistic discharge dispositions (e.g., “Skilled nursing” for expired patients). If outcome = “Expired,” then discharge disposition = “Expired.”  
+- **Readmission Flag**: If readmission flag = 1, labeled as “Readmitted,” else retained existing outcome.  
+- **Readmission Rate**: If interval between admissions ≥ 30 days, flagged as 1 (readmission), else 0.  
+
+## Medical Codes
+- **ICD-10 & CPT Codes**: Used `XLOOKUP` to map codes to descriptions, making data interpretable for non-medical professionals.  
+
+## Patient Demographics
+- **Gender Consistency**: For patients with conflicting gender entries, selected the most frequent value. If no majority, chose the first recorded gender using `INDEX` and `MATCH`.  
+- **Age Consistency**: For patients with multiple ages, calculated the mean age per patient for consistency.  
+
+## Handling Missing Values
+- **Cost of Encounter**: Imputed missing values with the median cost  
+
+## Converting Data Types
+- **Date Columns**: Standardized all date columns to US format using Power Query.  
+
+## Standardizing Column Names
+- Ensured all column names followed a consistent naming convention for readability and easier querying
+- Standardization of the Cost of Encounter column with the dollar symbol.  
+
+## Duplicate Check
+- Duplicates: No duplicate records were found.  
 
 ### Exploratory Data Analysis
 EDA involved exploring data sales to answer questions such as 
