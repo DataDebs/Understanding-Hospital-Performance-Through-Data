@@ -5,7 +5,8 @@
 - [Recommendations] (#recommendations)
 - [Data Sources] (#data-sources)
 
-### Project Overview: This data analysis project aims to build foundational thinking skills required of healthcare data analysts. 
+### Project Overview
+This data analysis project aims to build foundational thinking skills required of healthcare data analysts, uncover trends in hosputal setting. The goal is to analyze the dataset, clesn inconsistent records, perform exploratory data analysis (EDA) and generate insights (recommendations) that can help understand the hospital performance.
 
 ## Objectives
 - Identify 10 meaningful performance metrics that best explain how this hospital operates
@@ -26,7 +27,7 @@ The Dataset contains:
 - Clinical & Coding Data: (icd10_diagnosis, cpt_procedure, severity_level)
 - Financial & Outcome Data: (cost_of_encounter, discharge_disposition, outcome, readmission_flag)
 
-Rows:5000
+Rows: 5000
 
 Columns: 17
 
@@ -37,6 +38,7 @@ Columns: 17
 ## Data Cleaning/Preparation: The following datIa cleaning processes were carried out: 
 
 ###  Data Loading and Inspection
+
 - **Date/Time Standardization**: Converted all date/time columns to US timestamp format using Power Query.  
 - **Admission vs Discharge Validation**: Identified cases where admission occurred before discharge. Used `MAXIFS` to find the latest valid discharge date before the current admission.  
 - **Interval Calculation**: Applied an `IF` function — if discharge date is blank, return blank; otherwise, calculate the difference between discharge and admission dates.  
@@ -69,23 +71,17 @@ Columns: 17
 - Duplicates: No duplicate records were found.  
 
 ### Exploratory Data Analysis
-EDA involved exploring data sales to answer questions such as 
+Several analyses and visualizations were performed to understand the dataset. The following questions were explored. 
 - How efficiently patients move through care?
 - Where delays may exist
 - What outcomes patients experience?
 - Which operational signals leadership should monitor?
 - How efficiently patients move through care
 - What is this hospital doing well operationally?
--Where do you suspect bottlenecks or risks exist?
--Which results would concern leadership?
--What clarifying questions would you ask clinicians or administrators before recommending action?
+- Where do you suspect bottlenecks or risks exist?
+- Which results would concern leadership?
+- What clarifying questions would you ask clinicians or administrators before recommending action?
 
-
-### Data Analysis
-Some interesting codes/features worked with include
-- Power Query to format the datetime to 
-- Functions like Maxifs where used to find the most previous date.time discharge date.time for same patient where earlier admission and discharge date.time is before current admission. Ifs functions were used where readmission is within 30 days then 1, else 0
-  
 ### Results/Findings
 The analysis result is as follows;
 #### What is this hospital doing well operationally?
