@@ -118,7 +118,7 @@ The analysis result is as follows;
 ## Limitations
 - Missing values in important columns
 - Data Quality Issues
-- assumptions made during cleaning
+- Assumptions made during cleaning
 
 ## References
 - Luke Barousse Youtube Tutorials
