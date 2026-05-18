@@ -110,6 +110,13 @@ The analysis result is as follows;
 - How is discharge planning conducted and what follow-up exists to reduce re-admissions?
 - Are staffing or equipment shortages contributing to ED delays or high-severity care strain?
 
+## HealthCare Performance Analysis
+<img width="877" height="495" alt="project 3" src="https://github.com/user-attachments/assets/7f560348-6734-44c0-bcc1-3c730d61336f" />
+
+<img width="876" height="490" alt="project 1" src="https://github.com/user-attachments/assets/70e93a9f-1115-4d76-ba35-a39b0a3b741b" />
+
+<img width="877" height="495" alt="project 3" src="https://github.com/user-attachments/assets/c39f0a71-7718-47a1-ae61-c580910d928c" />
+
 ## Recommendations
 - Implement post-discharge follow-up for high-risk patients to reduce re-admissions
 - Review cost standardization protocols especially for high-cost procedures like 81002
@@ -122,6 +129,10 @@ The analysis result is as follows;
 
 ## References
 - Luke Barousse Youtube Tutorials
+
+
+
+
 
 
 
